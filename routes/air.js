@@ -15,6 +15,14 @@ router.get('/', function(req, res, next) {
     client.get(url, function (data, response) { 
         res.json({...data})
     });
+
+    // let allowCrossDomain = function(req, res, next) {
+    //     res.header('Access-Control-Allow-Origin', '*');
+    //     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    //     next();
+    // }
+    // app.use(allowCrossDomain)
+
 });
 
 module.exports = router;
